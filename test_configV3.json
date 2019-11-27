@@ -362,11 +362,17 @@
       "publications":[ 
         { 
           "packagerId":"ts-primary",
-          "publishPointId":"pubpt_0"
+          "publishPointId":"pubpt_0",
+          "crossPlaybackPaths":[ 
+            "{{ primaryCrossPlaybackBaseUrl }}"
+          ]
         },
         { 
           "packagerId":"ts-secondary",
-          "publishPointId":"pubpt_1"
+          "publishPointId":"pubpt_1",
+          "crossPlaybackPaths":[ 
+            "{{ secondaryCrossPlaybackBaseUrl }}"
+          ]
         },
         { 
           "packagerId":"ts-vod",
