@@ -336,26 +336,6 @@
             "720p-30fps-4500kbps",
             "720p-60fps-5500kbps"
           ]
-        },
-        { 
-          "dvrWindow":"14400s",
-          "includeUtcTimeInPlaylists":true,
-          "variants":[ 
-            5,
-            4,
-            6,
-            7
-          ],
-          "timelineMarkerFormats":[ 
-            "SCTE35",
-            "TURNER_SIMPLE"
-          ],
-          "iframeOnlyEncodings":[ 
-            "540p-30fps-2500kbps",
-            "480p-30fps-1800kbps",
-            "720p-30fps-3500kbps",
-            "720p-30fps-4500kbps"
-          ]
         }
       ],
       "masterPlaylistPublishFrequency":"0s",
@@ -386,33 +366,16 @@
       "dvrWindow":"14400s",
       "includeUtcTimeInPlaylists":true,
       "variants":[ 
-        0,
-        1,
-        2,
-        3,
-        4,
         5,
+        4,
         6,
-        7,
-        8,
-        9
+        7 
       ],
       "timelineMarkerFormats":[ 
         "SCTE35",
         "TURNER_SIMPLE"
       ],
-      "iframeOnlyEncodings":[ 
-        "234p-30fps-300kbps",
-        "234p-30fps-550kbps",
-        "360p-30fps-900kbps",
-        "360p-30fps-1300kbps",
-        "480p-30fps-1800kbps",
-        "540p-30fps-2500kbps",
-        "720p-30fps-3500kbps",
-        "720p-30fps-4500kbps",
-        "720p-60fps-5500kbps"
-      ],
-      "masterPlaylistPublishFrequency":"0s",
+       "masterPlaylistPublishFrequency":"0s",
       "publications":[ 
         { 
           "packagerId":"ts-primary",
