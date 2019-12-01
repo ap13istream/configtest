@@ -1,459 +1,453 @@
-{ 
-  "id":{ 
-    "distributor":"{{distributor_id}}",
-    "provider":"nba",
-    "transcodedStream":"{{id}}",
-    "name":"{{distributor_id}}/{{id}}/{{region}}"
-  },
-  "audioSourceStreams":{ 
-    "eng":{ 
-      "name":"English",
-      "language":"eng"
-    }
-  },
-  "closedCaptionStreams":[ 
-    { 
-      "name":"Closed Captions",
-      "language":"eng"
-    }
-  ],
-  "videoEncodings":{ 
-    "234p-30fps-300kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":416,
-        "height":234
-      },
-      "bitrate":300000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "234p-30fps-550kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":416,
-        "height":234
-      },
-      "bitrate":550000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "360p-30fps-900kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":640,
-        "height":360
-      },
-      "bitrate":900000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "360p-30fps-1300kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":640,
-        "height":360
-      },
-      "bitrate":1300000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "480p-30fps-1800kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":848,
-        "height":480
-      },
-      "bitrate":1800000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "540p-30fps-2500kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":960,
-        "height":540
-      },
-      "bitrate":2500000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "720p-30fps-3500kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":1280,
-        "height":720
-      },
-      "bitrate":3500000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "720p-30fps-4500kbps":{ 
-      "frameRate":30,
-      "resolution":{ 
-        "width":1280,
-        "height":720
-      },
-      "bitrate":4500000,
-      "h264Encoding":{ 
-        "profile":"MAIN"
-      },
-      "bufferDuration":4
-    },
-    "720p-60fps-5500kbps":{ 
-      "frameRate":60,
-      "resolution":{ 
-        "width":1280,
-        "height":720
-      },
-      "bitrate":5500000,
-      "h264Encoding":{ 
-        "profile":"HIGH"
-      },
-      "bufferDuration":4
-    }
-  },
-  "audioEncodings":{ 
-    "aac-128kbps":{ 
-      "bitrate":128000,
-      "channels":2,
-      "sampleRate":44100,
-      "aacEncoding":{ 
-        "profile":"AAC_LC"
+{
+   "id": {
+      "distributor": "{{distributor_id}}",
+      "provider": "nba",
+      "transcodedStream": "{{id}}",
+      "name": "{{distributor_id}}/{{id}}/{{region}}"
+   },
+   "audioSourceStreams": {
+      "eng": {
+         "name": "English",
+         "language": "eng"
       }
-    }
-  },
-  "variants":[ 
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"234p-30fps-300kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"234p-30fps-550kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"360p-30fps-900kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"360p-30fps-1300kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"480p-30fps-1800kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"540p-30fps-2500kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"720p-30fps-3500kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"720p-30fps-4500kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng",
-      "videoEncoding":"720p-60fps-5500kbps"
-    },
-    { 
-      "audioEncoding":"aac-128kbps",
-      "audioSource":"eng"
-    }
-  ],
-  "publishPoints":{ 
-    "pubpt_0":{ 
-      "httpMethod":"PUT",
-      "publishBaseUrl":"{{ primaryBaseUrl }}",
-      "playbackQueryParams":"{{ playback_query_params }}",
-      "playbackBaseUrl":"{{ primaryPlaybackBaseUrl }}",
-      "doNotMonitor":false,
-      "urlType":"HOST_RELATIVE"
-    },
-    "pubpt_0_connected1a":{ 
-      "httpMethod":"PUT",
-      "publishBaseUrl":"{{ primaryBaseUrl }}/Connected1a",
-      "playbackQueryParams":"{{ playback_query_params }}",
-      "playbackBaseUrl":"{{ primaryPlaybackBaseUrl }}/Connected1a",
-      "playlistOnlySource":"pubpt_0",
-      "doNotMonitor":true,
-      "urlType":"HOST_RELATIVE"
-    },
-    "pubpt_1":{ 
-      "httpMethod":"PUT",
-      "publishBaseUrl":"{{ secondaryBaseUrl }}",
-      "playbackQueryParams":"{{ playback_query_params }}",
-      "playbackBaseUrl":"{{ secondaryPlaybackBaseUrl }}",
-      "doNotMonitor":false,
-      "urlType":"HOST_RELATIVE"
-    },
-    "pubpt_1_connected1b":{ 
-      "httpMethod":"PUT",
-      "publishBaseUrl":"{{ secondaryBaseUrl }}/Connected1b",
-      "playbackQueryParams":"{{ playback_query_params }}",
-      "playbackBaseUrl":"{{ secondaryPlaybackBaseUrl }}/Connected1b",
-      "playlistOnlySource":"pubpt_1",
-      "doNotMonitor":true,
-      "urlType":"HOST_RELATIVE"
-    },
-    "pubpt_vod":{ 
-      "publishBaseUrl":"{{ vod }}",
-      "playbackBaseUrl":"{{ vod }}",
-      "useAbsoluteUrlsInPlaylist":false,
-      "doNotMonitor":true,
-      "mediaTimeBudgetFactor":3
-    }
-  },
-  "targetDuration":"6s",
-  "presentations":[ 
-    { 
-      "dvrWindow":"14400s",
-      "includeUtcTimeInPlaylists":true,
-      "variants":[ 
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "timelineMarkerFormats":[ 
-        "SCTE35",
-        "TURNER_SIMPLE"
-      ],
-      "iframeOnlyEncodings":[ 
-        "234p-30fps-300kbps",
-        "234p-30fps-550kbps",
-        "360p-30fps-900kbps",
-        "360p-30fps-1300kbps",
-        "480p-30fps-1800kbps",
-        "540p-30fps-2500kbps",
-        "720p-30fps-3500kbps",
-        "720p-30fps-4500kbps",
-        "720p-60fps-5500kbps"
-      ],
-      "partialPresentations":[ 
-        { 
-          "playlistPath":"Phone",
-          "mediaStreams":[ 
-            2,
+   },
+   "closedCaptionStreams": [
+      {
+         "name": "Closed Captions",
+         "language": "eng"
+      }
+   ],
+   "videoEncodings": {
+      "234p-30fps-300kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 416,
+            "height": 234
+         },
+         "bitrate": 300000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "234p-30fps-550kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 416,
+            "height": 234
+         },
+         "bitrate": 550000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "360p-30fps-900kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 640,
+            "height": 360
+         },
+         "bitrate": 900000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "360p-30fps-1300kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 640,
+            "height": 360
+         },
+         "bitrate": 1300000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "480p-30fps-1800kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 848,
+            "height": 480
+         },
+         "bitrate": 1800000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "540p-30fps-2500kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 960,
+            "height": 540
+         },
+         "bitrate": 2500000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "720p-30fps-3500kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 1280,
+            "height": 720
+         },
+         "bitrate": 3500000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "720p-30fps-4500kbps": {
+         "frameRate": 30,
+         "resolution": {
+            "width": 1280,
+            "height": 720
+         },
+         "bitrate": 4500000,
+         "h264Encoding": {
+            "profile": "MAIN"
+         },
+         "bufferDuration": 4
+      },
+      "720p-60fps-5500kbps": {
+         "frameRate": 60,
+         "resolution": {
+            "width": 1280,
+            "height": 720
+         },
+         "bitrate": 5500000,
+         "h264Encoding": {
+            "profile": "HIGH"
+         },
+         "bufferDuration": 4
+      }
+   },
+   "audioEncodings": {
+      "aac-128kbps": {
+         "bitrate": 128000,
+         "channels": 2,
+         "sampleRate": 44100,
+         "aacEncoding": {
+            "profile": "AAC_LC"
+         }
+      }
+   },
+   "variants": [
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "234p-30fps-300kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "234p-30fps-550kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "360p-30fps-900kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "360p-30fps-1300kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "480p-30fps-1800kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "540p-30fps-2500kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "720p-30fps-3500kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "720p-30fps-4500kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng",
+         "videoEncoding": "720p-60fps-5500kbps"
+      },
+      {
+         "audioEncoding": "aac-128kbps",
+         "audioSource": "eng"
+      }
+   ],
+   "publishPoints": {
+      "pubpt_0": {
+         "httpMethod": "PUT",
+         "publishBaseUrl": "{{ primaryBaseUrl }}",
+         "playbackQueryParams": "{{ playback_query_params }}",
+         "playbackBaseUrl": "{{ primaryPlaybackBaseUrl }}",
+         "doNotMonitor": false,
+         "urlType": "HOST_RELATIVE"
+      },
+      "pubpt_0_connected1a": {
+         "httpMethod": "PUT",
+         "publishBaseUrl": "{{ primaryBaseUrl }}/Connected1a",
+         "playbackQueryParams": "{{ playback_query_params }}",
+         "playbackBaseUrl": "{{ primaryPlaybackBaseUrl }}/Connected1a",
+         "playlistOnlySource": "pubpt_0",
+         "doNotMonitor": true,
+         "urlType": "HOST_RELATIVE"
+      },
+      "pubpt_1": {
+         "httpMethod": "PUT",
+         "publishBaseUrl": "{{ secondaryBaseUrl }}",
+         "playbackQueryParams": "{{ playback_query_params }}",
+         "playbackBaseUrl": "{{ secondaryPlaybackBaseUrl }}",
+         "doNotMonitor": false,
+         "urlType": "HOST_RELATIVE"
+      },
+      "pubpt_1_connected1b": {
+         "httpMethod": "PUT",
+         "publishBaseUrl": "{{ secondaryBaseUrl }}/Connected1b",
+         "playbackQueryParams": "{{ playback_query_params }}",
+         "playbackBaseUrl": "{{ secondaryPlaybackBaseUrl }}/Connected1b",
+         "playlistOnlySource": "pubpt_1",
+         "doNotMonitor": true,
+         "urlType": "HOST_RELATIVE"
+      },
+      "pubpt_vod": {
+         "publishBaseUrl": "{{ vod }}",
+         "playbackBaseUrl": "{{ vod }}",
+         "useAbsoluteUrlsInPlaylist": false,
+         "doNotMonitor": true,
+         "mediaTimeBudgetFactor": 3
+      }
+   },
+   "targetDuration": "6s",
+   "presentations": [
+      {
+         "dvrWindow": "14400s",
+         "includeUtcTimeInPlaylists": true,
+         "variants": [
             0,
             1,
-            3,
-            4,
-            5
-          ]
-        },
-        { 
-          "playlistPath":"Tablet",
-          "mediaStreams":[ 
-            3,
-            1,
             2,
-            4,
-            5,
-            6
-          ]
-        },
-        { 
-          "playlistPath":"Desktop",
-          "mediaStreams":[ 
             3,
-            1,
-            2,
-            4,
-            5,
-            6,
-            7
-          ]
-        },
-        { 
-          "playlistPath":"Desktop2",
-          "mediaStreams":[ 
-            3,
-            1,
-            2,
             4,
             5,
             6,
             7,
-            8
-          ]
-        },
-        { 
-          "playlistPath":"Connected1",
-          "mediaStreams":[ 
-            5,
-            4,
-            6,
-            7
-          ]
-        },
-        { 
-          "playlistPath":"Connected2",
-          "mediaStreams":[ 
-            5,
-            4,
-            6,
-            7,
-            8
-          ],
-          "iframeOnlyEncodings":[ 
-            "540p-30fps-2500kbps",
+            8,
+            9
+         ],
+         "timelineMarkerFormats": [
+            "SCTE35",
+            "TURNER_SIMPLE"
+         ],
+         "iframeOnlyEncodings": [
+            "234p-30fps-300kbps",
+            "234p-30fps-550kbps",
+            "360p-30fps-900kbps",
+            "360p-30fps-1300kbps",
             "480p-30fps-1800kbps",
+            "540p-30fps-2500kbps",
             "720p-30fps-3500kbps",
             "720p-30fps-4500kbps",
             "720p-60fps-5500kbps"
-          ]
-        }
-      ],
-      "masterPlaylistPublishFrequency":"0s",
-      "publications":[ 
-        { 
-          "packagerId":"ts-primary",
-          "publishPointId":"pubpt_0",
-          "crossPlaybackPaths":[ 
-            "{{ primaryCrossPlaybackBaseUrl }}"
-          ]
-        },
-        { 
-          "packagerId":"ts-secondary",
-          "publishPointId":"pubpt_1",
-          "crossPlaybackPaths":[ 
-            "{{ secondaryCrossPlaybackBaseUrl }}"
-          ]
-        },
-        { 
-          "packagerId":"ts-vod",
-          "publishPointId":"pubpt_vod"
-        }
-      ],
-      "synchronizeVariants":true,
-      "id":"0"
-    },
-    { 
-      "dvrWindow":"14400s",
-      "includeUtcTimeInPlaylists":true,
-      "variants":[ 
-        5,
-        4,
-        6,
-        7 
-      ],
-      "timelineMarkerFormats":[ 
-        "SCTE35",
-        "TURNER_SIMPLE"
-      ],
-       "masterPlaylistPublishFrequency":"0s",
-      "publications":[ 
-        { 
-          "packagerId":"ts-primary",
-          "publishPointId":"pubpt_0_connected1a"
-        },
-        { 
-          "packagerId":"ts-secondary",
-          "publishPointId":"pubpt_1_connected1b"
-        }
-      ],
-      "synchronizeVariants":true,
-      "id":"1"
-    }
-  ],
-  "packagers":{ 
-    "ts-primary":{ 
-      "extensions":[ 
-        { 
-          "nbalpId3Time":{ 
-
-          }
-        }
-      ],
-      "contentProtection":{ 
-        "internal":{ 
-          "publishPoints":[ 
-            { 
-              "httpMethod":"PUT",
-              "publishBaseUrl":"{{ primaryBaseUrl }}/keys/{key_id}.key",
-              "playbackBaseUrl":"{{ primaryPlaybackBaseUrl }}/keys/{key_id}.key"
+         ],
+         "partialPresentations": [
+            {
+               "playlistPath": "Phone",
+               "mediaStreams": [
+                  2,
+                  0,
+                  1,
+                  3,
+                  4,
+                  5
+               ]
+            },
+            {
+               "playlistPath": "Tablet",
+               "mediaStreams": [
+                  3,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6
+               ]
+            },
+            {
+               "playlistPath": "Desktop",
+               "mediaStreams": [
+                  3,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7
+               ]
+            },
+            {
+               "playlistPath": "Desktop2",
+               "mediaStreams": [
+                  3,
+                  1,
+                  2,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+               ]
+            },
+            {
+               "playlistPath": "Connected1",
+               "mediaStreams": [
+                  5,
+                  4,
+                  6,
+                  7
+               ]
+            },
+            {
+               "playlistPath": "Connected2",
+               "mediaStreams": [
+                  5,
+                  4,
+                  6,
+                  7,
+                  8
+               ],
+               "iframeOnlyEncodings": [
+                  "540p-30fps-2500kbps",
+                  "480p-30fps-1800kbps",
+                  "720p-30fps-3500kbps",
+                  "720p-30fps-4500kbps",
+                  "720p-60fps-5500kbps"
+               ]
             }
-          ],
-          "ivRotation":"UNIQUE_PER_SEGMENT"
-        },
-        "keyRotation":{ 
-          "time":{ 
-            "interval":"200s"
-          }
-        }
+         ],
+         "masterPlaylistPublishFrequency": "0s",
+         "publications": [
+            {
+               "packagerId": "ts-primary",
+               "publishPointId": "pubpt_0",
+               "crossPlaybackPaths": [
+                  "{{ primaryCrossPlaybackBaseUrl }}"
+               ]
+            },
+            {
+               "packagerId": "ts-secondary",
+               "publishPointId": "pubpt_1",
+               "crossPlaybackPaths": [
+                  "{{ secondaryCrossPlaybackBaseUrl }}"
+               ]
+            },
+            {
+               "packagerId": "ts-vod",
+               "publishPointId": "pubpt_vod"
+            }
+         ],
+         "synchronizeVariants": true,
+         "id": "0"
       },
-      "ts-secondary":{ 
-        "extensions":[ 
-          { 
-            "nbalpId3Time":{ 
-
+      {
+         "dvrWindow": "14400s",
+         "includeUtcTimeInPlaylists": true,
+         "variants": [
+            5,
+            4,
+            6,
+            7
+         ],
+         "timelineMarkerFormats": [
+            "SCTE35",
+            "TURNER_SIMPLE"
+         ],
+         "masterPlaylistPublishFrequency": "0s",
+         "publications": [
+            {
+               "packagerId": "ts-primary",
+               "publishPointId": "pubpt_0_connected1a"
+            },
+            {
+               "packagerId": "ts-secondary",
+               "publishPointId": "pubpt_1_connected1b"
             }
-          }
-        ],
-        "contentProtection":{ 
-          "internal":{ 
-            "publishPoints":[ 
-              { 
-                "httpMethod":"PUT",
-                "publishBaseUrl":"{{ secondaryBaseUrl }}/keys/{key_id}.key",
-                "playbackBaseUrl":"{{ secondaryPlaybackBaseUrl }}/keys/{key_id}.key"
-              }
+         ],
+         "synchronizeVariants": true,
+         "id": "1"
+      }
+   ],
+   "packagers": {
+      "ts-primary": {
+         "extensions": [
+            {
+               "nbalpId3Time": {}
+            }
+         ],
+         "contentProtection": {
+            "internal": {
+               "publishPoints": [
+                  {
+                     "httpMethod": "PUT",
+                     "publishBaseUrl": "{{ primaryBaseUrl }}/keys/{key_id}.key",
+                     "playbackBaseUrl": "{{ primaryPlaybackBaseUrl }}/keys/{key_id}.key"
+                  }
+               ],
+               "ivRotation": "UNIQUE_PER_SEGMENT"
+            },
+            "keyRotation": {
+               "time": {
+                  "interval": "200s"
+               }
+            }
+         },
+         "ts-secondary": {
+            "extensions": [
+               {
+                  "nbalpId3Time": {}
+               }
             ],
-            "ivRotation":"UNIQUE_PER_SEGMENT"
-          },
-          "keyRotation":{ 
-            "time":{ 
-              "interval":"200s"
+            "contentProtection": {
+               "internal": {
+                  "publishPoints": [
+                     {
+                        "httpMethod": "PUT",
+                        "publishBaseUrl": "{{ secondaryBaseUrl }}/keys/{key_id}.key",
+                        "playbackBaseUrl": "{{ secondaryPlaybackBaseUrl }}/keys/{key_id}.key"
+                     }
+                  ],
+                  "ivRotation": "UNIQUE_PER_SEGMENT"
+               },
+               "keyRotation": {
+                  "time": {
+                     "interval": "200s"
+                  }
+               }
+            },
+            "ts-vod": {
+               "extensions": [
+                  {
+                     "nbalpId3Time": {}
+                  }
+               ]
             }
-          }
-        },
-        "ts-vod":{ 
-          "extensions":[ 
-            { 
-              "nbalpId3Time":{ 
-
-              }
-            }
-          ]
-        }
-      },
-      "featureFlags":[ 
-        "use-internal-packaging"
-      ]
-    }
-  }
+         },
+         "featureFlags": [
+            "use-internal-packaging"
+         ]
+      }
+   }
 }
